@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="utf-8">
+		<title>Calculator</title>
+		<link rel="stylesheet" href="main.css">
+	</head>
+	
+	<body>
+	<h1>Calculator</h1>
+		<div id="board">
+			<div id="LCD"></div>
+			<div style="clear:both;"></div>
+			<div class="digit" id="clear" onclick="clear()">C</div>
+			<div class="digit" id="off">OFF</div>
+			<div class="digit" id="sqrt">sqrt</div>
+			<div class="digit" id="proc">%</div>
+			<div style="clear:both;"></div>
+			
+			<div class="digit" id="d7" onclick="select(7)">7</div>
+			<div class="digit" id="d8" onclick="select(8)">8</div>
+			<div class="digit" id="d9" onclick="select(9)">9</div>
+			<div class="digit" id="multi">X</div>
+			<div style="clear:both;"></div>
+			
+			<div class="digit" id="d4" onclick="select(4)">4</div>
+			<div class="digit" id="d5" onclick="select(5)">5</div>
+			<div class="digit" id="d6" onclick="select(6)">6</div>
+			<div class="digit" id="subtract">-</div>
+			<div style="clear:both;"></div>
+			
+			<div class="digit" id="d1" onclick="select(1)">1</div>
+			<div class="digit" id="d2" onclick="select(2)">2</div>
+			<div class="digit" id="d3" onclick="select(3)">3</div>
+			<div class="digit" id="add">+</div>
+			<div style="clear:both;"></div>
+			
+			<div class="digit" id="d0" onclick="select(0)">0</div>
+			<div class="digit" id="dot">.</div>
+			<div class="digit" id="equal">=</div>
+			<div class="digit" id="divide">/</div>
+			<div style="clear:both;"></div>
+		</div>
+		<script src="main.js"></script>
+	</body>
+</html>
