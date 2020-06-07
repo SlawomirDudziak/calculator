@@ -9,10 +9,10 @@
 	<body>
 	<h1>Calculator</h1>
 		<div id="board">
-			<div id="LCD"></div>
+			<input type="number" id="LCD">
 			<div style="clear:both;"></div>
-			<div class="digit" id="clear" onclick="clear()">C</div>
-			<div class="digit" id="off">OFF</div>
+			<div class="digit" id="clear" onclick="clearScreen()">C</div>
+			<div class="digit" id="off" onclick="clearScreen()">OFF</div>
 			<div class="digit" id="sqrt">sqrt</div>
 			<div class="digit" id="proc">%</div>
 			<div style="clear:both;"></div>
@@ -32,12 +32,12 @@
 			<div class="digit" id="d1" onclick="select(1)">1</div>
 			<div class="digit" id="d2" onclick="select(2)">2</div>
 			<div class="digit" id="d3" onclick="select(3)">3</div>
-			<div class="digit" id="add">+</div>
+			<div class="digit" id="add" onclick="addition()">+</div>
 			<div style="clear:both;"></div>
 			
 			<div class="digit" id="d0" onclick="select(0)">0</div>
 			<div class="digit" id="dot">.</div>
-			<div class="digit" id="equal">=</div>
+			<div class="digit" id="equal" onclick="equals()">=</div>
 			<div class="digit" id="divide">/</div>
 			<div style="clear:both;"></div>
 		</div>
