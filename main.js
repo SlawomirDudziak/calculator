@@ -2,6 +2,7 @@ var LCD='';
 var firstNumber;
 var secondNumber=0;
 var score=0;
+var operation='none';
 
 function select(digit)
 {
@@ -24,13 +25,60 @@ function addition()
 	clearScreen();
 	//console.trace()
 	score += firstNumber;
+	operation='add';
+}
+function subtraction()
+{
+	firstNumber=document.getElementById("LCD").value;
+	var firstNumber = parseInt(firstNumber);
+	console.log(firstNumber, typeof(firstNumber));
+	clearScreen();
+	score += firstNumber;
+	operation='subtract';
+}
+function multiplication()
+{
+	firstNumber=document.getElementById("LCD").value;
+	var firstNumber = parseInt(firstNumber);
+	console.log(firstNumber, typeof(firstNumber));
+	clearScreen();
+	score += firstNumber;
+	operation='multiply';
+}
+function division()
+{
+	firstNumber=document.getElementById("LCD").value;
+	var firstNumber = parseInt(firstNumber);
+	console.log(firstNumber, typeof(firstNumber));
+	clearScreen();
+	score += firstNumber;
+	operation='divide';
 }
 function equals()
 {
 	console.log(score, 'score');
 	secondNumber=parseInt(document.getElementById("LCD").value);
-	score+=secondNumber;
+	switch(operation)
+	{
+		case 'add':
+			score+=secondNumber;
+			break;
+		case 'subtract':
+			score-=secondNumber;
+			break;
+		case 'multiply':
+			score*=secondNumber;
+			break;
+		case 'divide':
+			score/=secondNumber;
+			break;
+		default:
+			score=404;
+			break;
+	}
+	
 	console.log(score, 'score');
 	document.getElementById("LCD").value=score;
 	score=0;
+	operation='none';
 }
