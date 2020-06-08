@@ -6,15 +6,24 @@ var operation='none';
 
 function select(digit)
 {
-	LCD=digit;
+	if(document.getElementById("LCD").value==0)
+	{
+		document.getElementById("LCD").value='';
+	}
+	
+	//LCD=digit;
 	//document.getElementById("LCD").innerHTML+= digit;
-	document.getElementById("LCD").value+=LCD;
+	document.getElementById("LCD").value+=digit;
 	return LCD;
 }
 function clearScreen()
 {
-	document.getElementById("LCD").value='';
+	document.getElementById("LCD").value=0;
 	//console.log('2');
+}
+function off()
+{
+	document.getElementById("LCD").value='';
 }
 function addition()
 {
@@ -53,6 +62,13 @@ function division()
 	clearScreen();
 	score += firstNumber;
 	operation='divide';
+}
+function root()
+{
+	firstNumber=document.getElementById("LCD").value;
+	var firstNumber = parseInt(firstNumber);
+	document.getElementById("LCD").value=Math.sqrt(firstNumber);
+	console.log(Math.sqrt(firstNumber), 'sqrt');
 }
 function equals()
 {
