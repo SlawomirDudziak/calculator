@@ -4,42 +4,36 @@ var secondNumber=0;
 var score=0;
 var operation='none';
 
+
 function select(digit)
 {
-	if(document.getElementById("LCD").value==0)
+	if(document.getElementById("LCD").textContent == 0)
 	{
-		document.getElementById("LCD").value='';
+		document.getElementById("LCD").textContent = '';
 	}
 	
-	//LCD=digit;
-	//document.getElementById("LCD").innerHTML+= digit;
-	document.getElementById("LCD").value+=digit;
+	document.getElementById("LCD").textContent += digit;
 	return LCD;
 }
 function clearScreen()
 {
-	document.getElementById("LCD").value=0;
-	//console.log('2');
+	document.getElementById("LCD").textContent = 0;
 }
 function off()
 {
-	document.getElementById("LCD").value='';
+	document.getElementById("LCD").textContent = '';
 }
 function addition()
 {
-	firstNumber=document.getElementById("LCD").value;
-	var firstNumber = parseInt(firstNumber);
-	//firstNumber=String(firstNumber);
+	firstNumber = parseFloat(document.getElementById("LCD").textContent);
 	console.log(firstNumber, typeof(firstNumber));
 	clearScreen();
-	//console.trace()
 	score += firstNumber;
 	operation='add';
 }
 function subtraction()
 {
-	firstNumber=document.getElementById("LCD").value;
-	var firstNumber = parseInt(firstNumber);
+	firstNumber = parseFloat(document.getElementById("LCD").textContent);
 	console.log(firstNumber, typeof(firstNumber));
 	clearScreen();
 	score += firstNumber;
@@ -47,8 +41,7 @@ function subtraction()
 }
 function multiplication()
 {
-	firstNumber=document.getElementById("LCD").value;
-	var firstNumber = parseInt(firstNumber);
+	firstNumber = parseFloat(document.getElementById("LCD").textContent);
 	console.log(firstNumber, typeof(firstNumber));
 	clearScreen();
 	score += firstNumber;
@@ -56,8 +49,7 @@ function multiplication()
 }
 function division()
 {
-	firstNumber=document.getElementById("LCD").value;
-	var firstNumber = parseInt(firstNumber);
+	firstNumber = parseFloat(document.getElementById("LCD").textContent);
 	console.log(firstNumber, typeof(firstNumber));
 	clearScreen();
 	score += firstNumber;
@@ -65,15 +57,14 @@ function division()
 }
 function root()
 {
-	firstNumber=document.getElementById("LCD").value;
-	var firstNumber = parseInt(firstNumber);
-	document.getElementById("LCD").value=Math.sqrt(firstNumber);
+	firstNumber = parseFloat(document.getElementById("LCD").textContent);
+	document.getElementById("LCD").textContent=Math.sqrt(firstNumber);
 	console.log(Math.sqrt(firstNumber), 'sqrt');
 }
 function equals()
 {
 	console.log(score, 'score');
-	secondNumber=parseInt(document.getElementById("LCD").value);
+	secondNumber=parseFloat(document.getElementById("LCD").textContent);
 	switch(operation)
 	{
 		case 'add':
@@ -94,7 +85,7 @@ function equals()
 	}
 	
 	console.log(score, 'score');
-	document.getElementById("LCD").value=score;
+	document.getElementById("LCD").textContent = score;
 	score=0;
 	operation='none';
 }

@@ -1,7 +1,10 @@
 body
 {
 	margin: 0;
-	background-color: #996600;
+	/* background-color: #996600; */
+	background-image: url("tlo-deski.jpg");
+	/* background-repeat: no-repeat; */
+	background-size: 120%;
 	color: white;
     font-size: 10px;
 }
@@ -46,6 +49,7 @@ p
 	margin:5px;
 	color:black;
 	box-sizing:border-box;
+	padding-top: 6px;
 }
 .digit
 {
