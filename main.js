@@ -53,63 +53,56 @@ clearButton.addEventListener('click', () => {
 
 function select(digit)
 {
-	if(document.getElementById("LCD").textContent == 0)
-	{
+	if (document.getElementById("LCD").textContent == 0) {
 		document.getElementById("LCD").textContent = '';
 	}
 	
 	document.getElementById("LCD").textContent += digit;
 	return LCD;
 }
-function clearScreen()
-{
+
+function clearScreen() {
 	document.getElementById("LCD").textContent = 0;
 }
-function off()
-{
+
+function off() {
 	document.getElementById("LCD").textContent = '';
 }
-function addition()
-{
+
+function addition() {
 	firstNumber = parseFloat(document.getElementById("LCD").textContent);
-	console.log(firstNumber, typeof(firstNumber));
 	clearScreen();
 	score += firstNumber;
 	operation='add';
 }
-function subtraction()
-{
+
+function subtraction() {
 	firstNumber = parseFloat(document.getElementById("LCD").textContent);
-	console.log(firstNumber, typeof(firstNumber));
 	clearScreen();
 	score += firstNumber;
 	operation='subtract';
 }
-function multiplication()
-{
+
+function multiplication() {
 	firstNumber = parseFloat(document.getElementById("LCD").textContent);
-	console.log(firstNumber, typeof(firstNumber));
 	clearScreen();
 	score += firstNumber;
 	operation='multiply';
 }
-function division()
-{
+
+function division() {
 	firstNumber = parseFloat(document.getElementById("LCD").textContent);
-	console.log(firstNumber, typeof(firstNumber));
 	clearScreen();
 	score += firstNumber;
 	operation='divide';
 }
-function root()
-{
+
+function root() {
 	firstNumber = parseFloat(document.getElementById("LCD").textContent);
 	document.getElementById("LCD").textContent=Math.sqrt(firstNumber);
-	console.log(Math.sqrt(firstNumber), 'sqrt');
 }
-function equals()
-{
-	console.log(score, 'score');
+
+function equals() {
 	secondNumber=parseFloat(document.getElementById("LCD").textContent);
 	switch(operation)
 	{
@@ -130,7 +123,6 @@ function equals()
 			break;
 	}
 	
-	console.log(score, 'score');
 	document.getElementById("LCD").textContent = score;
 	score=0;
 	operation='none';
