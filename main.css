@@ -1,32 +1,30 @@
-body
-{
+
+body {
+	font-family: 'Lato', sans-serif;
 	margin: 0;
-	/* background-color: #996600; */
 	background-image: url("tlo-deski.jpg");
-	/* background-repeat: no-repeat; */
 	background-size: 120%;
 	color: white;
     font-size: 10px;
 }
 
-h1
-{
+h1 {
 	font-size: 64px;
-	font-weight: 400;
+	font-weight: 700;
 	text-align: center;
 	margin-top: 20px;
 	margin-bottom: 0px;
 	color: white;
 }
-p
-{
+
+p {
 	text-align: center;
 	margin-top: 5px;
 	margin-bottom: 25px;
 	letter-spacing: 2px;
 }
-#board
-{
+
+#board {
 	background-color: black;
 	width:250px;
 	margin-top: 50px;
@@ -37,8 +35,8 @@ p
 	border-radius:25px;
 	padding:5px;
 }
-#LCD
-{
+
+#LCD {
 	background-color:#339933;
 	width: 225px;
 	height: 40px;
@@ -51,14 +49,13 @@ p
 	box-sizing:border-box;
 	padding-top: 6px;
 }
-.digit
-{
+
+.digit {
 	background-color: black;
 	width:40px;
 	height:40px;
 	font-weight: bold;
 	text-align:center;
-	/* vertical-align:middle; */
 	cursor:pointer;
 	padding:2px;
 	padding-top:8px;
@@ -67,15 +64,15 @@ p
 	border-radius:15px;
 	float:left;
 }
-#clear
-{
+
+#clear {
 	background-color: orange;
 }
-.digit:hover
-{
+
+.digit:hover {
 	background-color: #444444;
 }
-#clear:hover
-{
+
+#clear:hover {
 	background-color: #FFCC00;
 }

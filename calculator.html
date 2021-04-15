@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Calculator</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet"> 
 		<link rel="stylesheet" href="main.css">
 	</head>
 	
@@ -11,34 +13,34 @@
 		<div id="board">
 			<div id="LCD"></div>
 			<div style="clear:both;"></div>
-			<div class="digit" id="clear" onclick="clearScreen()">C</div>
-			<div class="digit" id="off" onclick="off()">OFF</div>
-			<div class="digit" id="sqrt" onclick="root()">sqrt</div>
+			<div class="digit" id="clear">C</div>
+			<div class="digit" id="off">OFF</div>
+			<div class="digit" id="sqrt">sqrt</div>
 			<div class="digit" id="proc">%</div>
 			<div style="clear:both;"></div>
 			
-			<div class="digit" id="d7" onclick="select(7)">7</div>
-			<div class="digit" id="d8" onclick="select(8)">8</div>
-			<div class="digit" id="d9" onclick="select(9)">9</div>
-			<div class="digit" id="multi" onclick="multiplication()">x</div>
+			<div class="digit" data-number>7</div>
+			<div class="digit" data-number>8</div>
+			<div class="digit" data-number>9</div>
+			<div class="digit" id="multiply">x</div>
 			<div style="clear:both;"></div>
 			
-			<div class="digit" id="d4" onclick="select(4)">4</div>
-			<div class="digit" id="d5" onclick="select(5)">5</div>
-			<div class="digit" id="d6" onclick="select(6)">6</div>
-			<div class="digit" id="subtract" onclick="subtraction()">-</div>
+			<div class="digit" data-number>4</div>
+			<div class="digit" data-number>5</div>
+			<div class="digit" data-number>6</div>
+			<div class="digit" id="subtract">-</div>
 			<div style="clear:both;"></div>
 			
-			<div class="digit" id="d1" onclick="select(1)">1</div>
-			<div class="digit" id="d2" onclick="select(2)">2</div>
-			<div class="digit" id="d3" onclick="select(3)">3</div>
-			<div class="digit" id="add" onclick="addition()">+</div>
+			<div class="digit" data-number>1</div>
+			<div class="digit" data-number>2</div>
+			<div class="digit" data-number>3</div>
+			<div class="digit" id="add">+</div>
 			<div style="clear:both;"></div>
 			
-			<div class="digit" id="d0" onclick="select(0)">0</div>
+			<div class="digit" data-number>0</div>
 			<div class="digit" id="dot">.</div>
-			<div class="digit" id="equal" onclick="equals()">=</div>
-			<div class="digit" id="divide" onclick="division()">/</div>
+			<div class="digit" id="equal">=</div>
+			<div class="digit" id="divide">/</div>
 			<div style="clear:both;"></div>
 		</div>
 		<script src="main.js"></script>

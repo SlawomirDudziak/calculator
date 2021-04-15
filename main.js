@@ -3,7 +3,53 @@ var firstNumber;
 var secondNumber=0;
 var score=0;
 var operation='none';
+const numberButtons = document.querySelectorAll('[data-number]');
+const addButton = document.querySelector('#add');
+const subtractButton = document.querySelector('#subtract');
+const multiplyButton = document.querySelector('#multiply');
+const divideButton = document.querySelector('#divide');
+const equalButton = document.querySelector('#equal');
+const sqrtButton = document.querySelector('#sqrt');
+const clearButton = document.querySelector('#clear');
+const offButton = document.querySelector('#off');
 
+numberButtons.forEach(button => {
+	button.addEventListener('click', () => {
+		select(button.innerText);
+	});
+});
+
+addButton.addEventListener('click', () => {
+	addition();
+});
+
+subtractButton.addEventListener('click', () => {
+	subtraction();
+});
+
+multiplyButton.addEventListener('click', () => {
+	multiplication();
+});
+
+divideButton.addEventListener('click', () => {
+	division();
+});
+
+equalButton.addEventListener('click', () => {
+	equals();
+});
+
+sqrtButton.addEventListener('click', () => {
+	root();
+});
+
+offButton.addEventListener('click', () => {
+	off();
+});
+
+clearButton.addEventListener('click', () => {
+	clearScreen();
+});
 
 function select(digit)
 {
@@ -80,7 +126,7 @@ function equals()
 			score/=secondNumber;
 			break;
 		default:
-			score=404;
+			score='error';
 			break;
 	}
 	
